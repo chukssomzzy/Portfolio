@@ -1,0 +1,61 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a5b4fc"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1e1b4b"/>
+  
+  <!-- Main Shell Process -->
+  <g transform="translate(50,50)">
+    <rect x="0" y="0" width="200" height="120" fill="#312e81" rx="4"/>
+    <text x="100" y="30" text-anchor="middle" font-family="monospace" font-size="14" fill="#e0e7ff">SHELL PROCESS</text>
+    <rect x="20" y="45" width="160" height="60" fill="#1e1b4b" rx="2"/>
+    <text x="30" y="65" font-family="monospace" font-size="12" fill="#a5b4fc">PID: parent</text>
+    <text x="30" y="85" font-family="monospace" font-size="12" fill="#a5b4fc">$ command args</text>
+  </g>
+
+  <!-- Parser -->
+  <g transform="translate(300,50)">
+    <rect x="0" y="0" width="200" height="120" fill="#312e81" rx="4"/>
+    <text x="100" y="30" text-anchor="middle" font-family="monospace" font-size="14" fill="#e0e7ff">PARSER</text>
+    <rect x="20" y="45" width="160" height="60" fill="#1e1b4b" rx="2"/>
+    <text x="30" y="65" font-family="monospace" font-size="10" fill="#a5b4fc">1. Split command line</text>
+    <text x="30" y="85" font-family="monospace" font-size="10" fill="#a5b4fc">2. Parse PATH</text>
+  </g>
+
+  <!-- Fork Process -->
+  <g transform="translate(550,50)">
+    <rect x="0" y="0" width="200" height="120" fill="#312e81" rx="4"/>
+    <text x="100" y="30" text-anchor="middle" font-family="monospace" font-size="14" fill="#e0e7ff">FORK()</text>
+    <rect x="20" y="45" width="160" height="60" fill="#1e1b4b" rx="2"/>
+    <text x="30" y="65" font-family="monospace" font-size="10" fill="#a5b4fc">Create child process</text>
+    <text x="30" y="85" font-family="monospace" font-size="10" fill="#a5b4fc">Return new PID</text>
+  </g>
+
+  <!-- Child Process -->
+  <g transform="translate(550,250)">
+    <rect x="0" y="0" width="200" height="120" fill="#312e81" rx="4"/>
+    <text x="100" y="30" text-anchor="middle" font-family="monospace" font-size="14" fill="#e0e7ff">CHILD PROCESS</text>
+    <rect x="20" y="45" width="160" height="60" fill="#1e1b4b" rx="2"/>
+    <text x="30" y="65" font-family="monospace" font-size="10" fill="#a5b4fc">execve(path, args)</text>
+    <text x="30" y="85" font-family="monospace" font-size="10" fill="#a5b4fc">Execute command</text>
+  </g>
+
+  <!-- Parent Wait -->
+  <g transform="translate(50,250)">
+    <rect x="0" y="0" width="200" height="120" fill="#312e81" rx="4"/>
+    <text x="100" y="30" text-anchor="middle" font-family="monospace" font-size="14" fill="#e0e7ff">PARENT PROCESS</text>
+    <rect x="20" y="45" width="160" height="60" fill="#1e1b4b" rx="2"/>
+    <text x="30" y="65" font-family="monospace" font-size="10" fill="#a5b4fc">wait(status)</text>
+    <text x="30" y="85" font-family="monospace" font-size="10" fill="#a5b4fc">Handle exit code</text>
+  </g>
+
+  <!-- Arrows -->
+  <path d="M 250,110 L 290,110" stroke="#a5b4fc" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M 500,110 L 540,110" stroke="#a5b4fc" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M 650,170 L 650,240" stroke="#a5b4fc" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M 650,170 L 250,310" stroke="#a5b4fc" stroke-width="2" marker-end="url(#arrowhead)" fill="none"/>
+</svg>

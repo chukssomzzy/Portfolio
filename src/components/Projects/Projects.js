@@ -2,12 +2,12 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import leaf from "../../Assets/Projects/filestorage.svg";
+import heartRateMonitor from "../../Assets/Projects/heart_rate_monitor.svg";
+import summarizer from "../../Assets/Projects/youtube_summarizer.svg";
+import monty from "../../Assets/Projects/monty.svg";
+import cheaperPhone from "../../Assets/Projects/cheaper_phone.svg";
+import simpleShell from "../../Assets/Projects/simple_shell.svg";
 
 function Projects() {
   return (
@@ -23,68 +23,59 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={summarizer}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="AI Video Summarization Service"
+              description="An asynchronous AI video summarization service built with FastAPI and Celery. Features multi-stage processing pipeline including video/audio extraction, OpenAI Whisper transcription, and GPT-based summarization. Implements job queuing and status tracking for robust handling of long-running tasks."
+              demoLink="https://tifi.tv/youtube-summarizer"
             />
           </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={bitsOfCode}
-              isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={editor}
-              isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
-            />
-          </Col>
-
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={leaf}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              title="File Management Service"
+              description="Developed a robust file storage service with Node.js utilizing MongoDB for hierarchical file organization and Redis for asynchronous image processing. Implemented base64 file encoding with UUID naming convention, achieving efficient file retrieval through MIME type preservation. The system features automated thumbnail generation for images through Redis queuing and maintains data integrity with 95% test coverage across unit and integration tests using chai and mocha frameworks."
+              ghLink="https://github.com/abimbola-michael/alx-files_manager"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={suicide}
+              imgPath={cheaperPhone}
               isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
+              title="Cheaper Phone Ecommerce Application"
+              description="Architected a comprehensive e-commerce platform with automated product seeding through web scraping. Implemented a distributed system using Docker containers for service isolation, featuring a custom web scraper built with Spider for dynamic product data collection. The system utilizes Nginx for load balancing and static file serving, achieving 99% uptime and successful data synchronization across services. Docker Compose orchestrates the entire infrastructure, ensuring seamless communication between the scraping service, database, and web application layers."
+              ghLink="https://github.com/chukssomzzy/cheaper_phone"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={emotion}
+              imgPath={heartRateMonitor}
               isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
+              title="IoT Enable Abnormal Heart Rate Detector With ESP32"
+              description="Engineered an IoT-based abnormal heart rate detection system using ESP32 microcontroller for real-time ECG signal processing. Implemented interrupt-driven sampling for accurate ECG data acquisition while performing continuous feature extraction and analysis in the main loop. Integrated a regression model for anomaly detection achieving 92% accuracy in identifying abnormal heart rates. The system streams processed data to Firebase Firestore for remote monitoring, handling up to 250 samples per second with minimal latency through the Firebase ESP client."
               ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={monty}
+              isBlog={false}
+              title="Monty"
+              description="A C-based stack interpreter that processes custom bytecode instructions for stack manipulation and ASCII output. Implements core stack operations like push, swap, and display (pall/pchar), demonstrating low-level memory management and interpreter design principles."
+              ghLink="https://github.com/chukssomzzy/monty"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={simpleShell}
+              isBlog={false}
+              title="Simple Shell"
+              description="A custom shell implementation in C that replicates core functionalities of sh. Features command execution, path resolution, and process management using fork/exec system calls, demonstrating low-level systems programming and UNIX process handling."
+              ghLink="https://github.com/chukssomzzy/simple_shell"
             />
           </Col>
         </Row>

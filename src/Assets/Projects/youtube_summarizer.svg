@@ -1,0 +1,69 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a5b4fc"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1e1b4b"/>
+  
+  <!-- Client Input Section -->
+  <g transform="translate(50,50)">
+    <rect x="0" y="0" width="200" height="120" fill="#312e81" rx="4"/>
+    <text x="100" y="30" text-anchor="middle" font-family="monospace" font-size="14" fill="#e0e7ff">CLIENT INPUT</text>
+    <rect x="20" y="45" width="160" height="60" fill="#1e1b4b" rx="2"/>
+    <text x="30" y="65" font-family="monospace" font-size="12" fill="#a5b4fc">YouTube URL</text>
+    <text x="30" y="85" font-family="monospace" font-size="12" fill="#a5b4fc">Video Upload</text>
+  </g>
+
+  <!-- FastAPI Section -->
+  <g transform="translate(300,30)">
+    <rect x="0" y="0" width="200" height="160" fill="#312e81" rx="4"/>
+    <text x="100" y="30" text-anchor="middle" font-family="monospace" font-size="14" fill="#e0e7ff">FASTAPI</text>
+    <rect x="20" y="45" width="160" height="100" fill="#1e1b4b" rx="2"/>
+    <text x="30" y="65" font-family="monospace" font-size="10" fill="#a5b4fc">1. Input Validation</text>
+    <text x="30" y="85" font-family="monospace" font-size="10" fill="#a5b4fc">2. Job ID Generation</text>
+    <text x="30" y="105" font-family="monospace" font-size="10" fill="#a5b4fc">3. Task Queue</text>
+    <text x="30" y="125" font-family="monospace" font-size="10" fill="#a5b4fc">4. Status Tracking</text>
+  </g>
+
+  <!-- Processing Pipeline -->
+  <g transform="translate(550,50)">
+    <rect x="0" y="0" width="200" height="400" fill="#312e81" rx="4"/>
+    <text x="100" y="30" text-anchor="middle" font-family="monospace" font-size="14" fill="#e0e7ff">CELERY PIPELINE</text>
+    <rect x="20" y="50" width="160" height="320" fill="#1e1b4b" rx="2"/>
+    <g transform="translate(40,80)">
+      <rect x="0" y="0" width="120" height="60" fill="#4338ca" rx="2"/>
+      <text x="60" y="25" text-anchor="middle" font-family="monospace" font-size="11" fill="#e0e7ff">Audio Extract</text>
+      <text x="60" y="45" text-anchor="middle" font-family="monospace" font-size="10" fill="#e0e7ff">yt-dlp/ffmpeg</text>
+    </g>
+    <g transform="translate(40,160)">
+      <rect x="0" y="0" width="120" height="60" fill="#4338ca" rx="2"/>
+      <text x="60" y="25" text-anchor="middle" font-family="monospace" font-size="11" fill="#e0e7ff">Transcription</text>
+      <text x="60" y="45" text-anchor="middle" font-family="monospace" font-size="10" fill="#e0e7ff">Whisper Model</text>
+    </g>
+    <g transform="translate(40,240)">
+      <rect x="0" y="0" width="120" height="60" fill="#4338ca" rx="2"/>
+      <text x="60" y="25" text-anchor="middle" font-family="monospace" font-size="11" fill="#e0e7ff">Summary</text>
+      <text x="60" y="45" text-anchor="middle" font-family="monospace" font-size="10" fill="#e0e7ff">OpenAI GPT</text>
+    </g>
+  </g>
+
+  <!-- Task Status Section -->
+  <g transform="translate(50,200)">
+    <rect x="0" y="0" width="200" height="250" fill="#312e81" rx="4"/>
+    <text x="100" y="30" text-anchor="middle" font-family="monospace" font-size="14" fill="#e0e7ff">TASK STATUS</text>
+    <rect x="20" y="45" width="160" height="190" fill="#1e1b4b" rx="2"/>
+    <text x="30" y="65" font-family="monospace" font-size="12" fill="#a5b4fc">job_id → status</text>
+    <text x="30" y="85" font-family="monospace" font-size="12" fill="#a5b4fc">PENDING</text>
+    <text x="30" y="105" font-family="monospace" font-size="12" fill="#a5b4fc">PROCESSING</text>
+    <text x="30" y="125" font-family="monospace" font-size="12" fill="#a5b4fc">COMPLETED</text>
+    <text x="30" y="145" font-family="monospace" font-size="12" fill="#a5b4fc">FAILED</text>
+  </g>
+
+  <!-- Flow Arrows -->
+  <path d="M 250,110 L 290,110" stroke="#a5b4fc" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M 500,110 L 540,110" stroke="#a5b4fc" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M 400,190 L 400,220 L 540,220" stroke="#a5b4fc" stroke-width="2" marker-end="url(#arrowhead)" fill="none"/>
+</svg>
