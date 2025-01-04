@@ -56,6 +56,6 @@ function Footer() {
       </Row>
     </Container>
   );
-}
 
+}
 export default Footer;
